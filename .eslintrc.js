@@ -7,6 +7,7 @@ module.exports = {
     ignorePatterns: [
         'dist/**/*',
         'lib/**/*',
+        'types/**/*',
         'rollup.config.mjs',
     ],
     parserOptions: {

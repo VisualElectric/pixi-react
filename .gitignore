@@ -3,6 +3,3 @@
 .DS_Store
 packages/*/stats.html
 node_modules/
-dist/
-lib/
-types/
