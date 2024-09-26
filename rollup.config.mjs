@@ -18,6 +18,8 @@ const {
     peerDependencies = {},
 } = repo;
 
+const isWatchMode = process.argv.includes('-w') || process.argv.includes('--watch');
+
 /**
  * Escapes the `RegExp` special characters.
  * @param {string} str
@@ -79,7 +81,7 @@ export default {
     ],
     plugins: [
         esbuild({ target: moduleTarget }),
-        sourcemaps(),
+        ...(isWatchMode ? [] : [sourcemaps()]),
         resolve({
             browser: true,
             preferBuiltins: false,

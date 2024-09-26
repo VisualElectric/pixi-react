@@ -7,6 +7,7 @@ module.exports = {
     ignorePatterns: [
         'dist/**/*',
         'lib/**/*',
+        'rollup.config.mjs',
     ],
     parserOptions: {
         project: './tsconfig.eslint.json',

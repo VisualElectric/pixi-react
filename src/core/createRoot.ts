@@ -62,7 +62,7 @@ export function createRoot(
 
     if (!root)
     {
-        let canvas;
+        let canvas: HTMLCanvasElement | undefined;
 
         if (target instanceof HTMLCanvasElement)
         {
@@ -75,6 +75,7 @@ export function createRoot(
             target.innerHTML = '';
             target.appendChild(canvas);
         }
+        internalState.canvas = canvas;
 
         const render = async (
             children: ReactNode,
