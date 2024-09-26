@@ -181,7 +181,7 @@ var packageData = {
 	husky: husky,
 	"lint-staged": {
 	"*.{ts,js,mjs}": [
-		"eslint --cache --fix --max-warnings 0"
+		"eslint --cache --fix"
 	]
 },
 	dependencies: dependencies,
@@ -1005,11 +1005,8 @@ function createRoot(target, options = {}, onInit) {
       internalState,
       render
     };
-    console.log("[pixi-react] createRoot", root);
-    console.log("[pixi-react] createRoot canvas", canvas);
     roots.set(canvas, root);
   }
-  console.log("[pixi-react] createRoot roots.size", roots.size);
   return root;
 }
 
@@ -1023,7 +1020,6 @@ function unmountRoot(root) {
         root.applicationState.app.destroy();
       }
       roots.delete(root.internalState.canvas);
-      console.log("[pixi-react] unmountRoot size", roots.size);
     });
   }
 }
@@ -1083,6 +1079,7 @@ const ApplicationFunction = (props, forwardedRef) => {
             application.resizeTo = resizeTo.current;
           }
         } else {
+          application.resizeTo = resizeTo;
         }
       } else {
         application.resizeTo = void 0;
