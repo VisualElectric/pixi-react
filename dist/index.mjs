@@ -1425,7 +1425,7 @@ function useTick(options, enabled = true) {
 
 "use strict";
 console.warn(`
-Be aware that you are using a beta version of Pixi React.
+Be aware that you are using a beta version of Pixi React (VE.3).
 - Things may be broken.
 - Things may (but shouldn't) change.
 - All functionality that's deprecated in the beta version WILL BE REMOVED for the production release.
