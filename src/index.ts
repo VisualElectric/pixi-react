@@ -17,3 +17,6 @@ export { useAssets } from './hooks/useAssets';
 export { useExtend } from './hooks/useExtend';
 export { useSuspenseAssets } from './hooks/useSuspenseAssets';
 export { useTick } from './hooks/useTick';
+export { type PixiElements } from './typedefs/PixiElements';
+export { type PixiReactElementProps } from './typedefs/PixiReactNode';
+export { type UnprefixedPixiElements } from './typedefs/UnprefixedPixiElements';
